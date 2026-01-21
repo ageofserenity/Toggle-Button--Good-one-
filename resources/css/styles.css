@@ -1,0 +1,85 @@
+/* =====================
+   Color Variables
+   ===================== */
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #111111;
+  --text-light: #000000;
+  --text-dark: #ffffff;
+
+  --sun-color: black;
+  --sun-hover-color: white;
+  --sun-hover-bg: black;
+
+  --moon-color: white;
+  --moon-hover-color: black;
+  --moon-hover-bg: white;
+}
+
+/* =====================
+   Section Background + Text
+   ===================== */
+.theme-section {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+/* Dark mode for section */
+.theme-section.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* =====================
+   Sun/Moon Buttons
+   ===================== */
+.theme-btn {
+  font-size: 2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 5px;
+  font-size: 100px;
+}
+
+/* Sun button (light mode) */
+.theme-btn.sun {
+  color: var(--sun-color);
+  background-color: transparent;
+}
+.theme-btn.sun:hover {
+  color: var(--sun-hover-color);
+  background-color: var(--sun-hover-bg);
+}
+.theme-section.dark-mode .theme-btn.sun {
+  display: none;
+}
+
+/* Moon button (dark mode) */
+.theme-btn.moon {
+  color: var(--moon-color);
+  background-color: transparent;
+}
+.theme-btn.moon:hover {
+  color: var(--moon-hover-color);
+  background-color: var(--moon-hover-bg);
+}
+.theme-section:not(.dark-mode) .theme-btn.moon {
+  display: none;
+}
+
+/* =====================
+   H1 Text Transition
+   ===================== */
+.mode-h1 {
+  transition: opacity 0.5s ease;
+  font-size: 65px;
+}
