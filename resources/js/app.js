@@ -26,6 +26,25 @@ document.querySelectorAll('.theme-section').forEach((section) => {
   });
 });
 
+// =====================
+// H1 fade-in on scroll
+// =====================
+const h1s = document.querySelectorAll('.mode-h1');
+
+const h1Observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  },
+  { threshold: 0.4 },
+);
+
+h1s.forEach((h1) => h1Observer.observe(h1));
+
 /*
 Section-Scoped:
 [Click Button in Section] 

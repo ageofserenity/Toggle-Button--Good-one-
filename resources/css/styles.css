@@ -177,4 +177,18 @@ textarea:not([rows]) {
 .mode-h1 {
   transition: opacity 0.5s ease;
   font-size: 65px;
+  opacity: 0;
+  transform: translateX(200px);
+  transition:
+    opacity 1.5s ease,
+    transform 1.5s ease;
 }
+
+.mode-h1.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*=====================
+Fade in Transition H1
+=======================*/
