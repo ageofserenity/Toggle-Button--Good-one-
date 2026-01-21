@@ -180,8 +180,8 @@ textarea:not([rows]) {
   opacity: 0;
   transform: translateX(200px);
   transition:
-    opacity 1.5s ease,
-    transform 1.5s ease;
+    opacity 2s ease,
+    transform 2s ease;
 }
 
 .mode-h1.visible {
